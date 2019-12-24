@@ -1,4 +1,5 @@
 export default {
+  base: '/docz',
   dest: './dist',
   menu: [
     'Introduction',
