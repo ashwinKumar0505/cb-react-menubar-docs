@@ -4,6 +4,6 @@ export default {
     'Introduction',
     'Getting Started',
     'Animation',
-    { name: 'API', menu: ['Menubar'] }
+    'Props'
   ]
 }

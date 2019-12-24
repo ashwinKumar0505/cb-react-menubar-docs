@@ -1,0 +1,32 @@
+---
+
+name:Props
+route:/Props
+
+---
+
+import MenuBar from "./MenuBar.js"
+
+# Props
+
+
+There are many props which you can pass to menubar and make it as you want.
+
+<MenuBar />
+
+
+## Usage
+
+* You can either pass props or you can leave without passing props
+
+* data prop is the required props
+
+```
+import Menubar from "cb-react-menubar"
+const App=()=>{
+ return(
+    <div>
+      <Menubar data={itemsToBeRendered} backgroundColor="green" textColor="white" animation=['fadeIn'.'fadeOut'] />
+    </div>
+ )
+}
