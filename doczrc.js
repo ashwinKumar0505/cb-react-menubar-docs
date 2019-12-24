@@ -1,4 +1,5 @@
 export default {
+  dest: './dist',
   menu: [
     'Introduction',
     'Getting Started',
