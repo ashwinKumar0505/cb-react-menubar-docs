@@ -27,7 +27,7 @@ const MenuBar = () => {
       <div className='InnerContainer1'>
         <p>menuItemsWidth</p>
         <p>Custom</p>
-        <p>430px</p>
+        <p>300px</p>
       </div>
       <div className='InnerContainer1'>
         <p>menuItemsMaxWidth</p>
