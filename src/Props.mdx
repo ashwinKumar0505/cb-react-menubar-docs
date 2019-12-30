@@ -19,14 +19,99 @@ There are many props which you can pass to menubar and make it as you want.
 
 * You can either pass props or you can leave without passing props
 
-* data prop is the required props
+* But data prop is the required props
 
-```
+
+### example-1
+
+```js
 import Menubar from "cb-react-menubar"
 const App=()=>{
+
+  const menuItems =[
+       {value: 'Fashion'},
+        {value: 'Electronics',items: []},
+        {value: 'Furnitures',items: []},
+        {value: 'Jewelery&watches',items: []}
+      ]
+
  return(
     <div>
-      <Menubar data={itemsToBeRendered} backgroundColor="green" textColor="white" animation=['fadeIn'.'fadeOut'] />
+      <Menubar data={MenuItems} backgroundColor="green" textColor="white" animation=['fadeIn'.'fadeOut'] />
+    </div>
+ )
+}
+
+```
+
+### example-2
+
+* To override classname for the menubar . you can write your own css and send the classname
+
+* You can also override the classname of hamBurgerMenu icon
+
+
+```
+Note:  If the classname of hamBurgerMenuIcon doesn't seem to override . Add the prefix .menu to the corresponding
+
+       hamBurgerClassName in your css file
+
+```
+
+```css
+
+.menubar{
+  margin-right:50px;
+}
+
+.hamBurgerMenu{
+  height:30px;
+  width:30px
+}
+
+
+```
+
+```js
+import Menubar from "cb-react-menubar"
+import "./Style.css"
+const App=()=>{
+  const menuItems =[
+       {value: 'Fashion'},
+        {value: 'Electronics',items: []},
+        {value: 'Furnitures',items: []},
+        {value: 'Jewelery&watches',items: []}
+      ]
+ return(
+    <div>
+      <Menubar data={menuItems} classname="menubar" hamBurgerClassName="hamBurgerMenu" iconColor="black"/>
+    </div>
+ )
+}
+
+```
+
+### example-3
+
+```js
+import Menubar from "cb-react-menubar"
+import "./Style.css"
+const App=()=>{
+  
+  const menuItems =[
+       {value: 'Fashion'},
+        {value: 'Electronics',items: []},
+        {value: 'Furnitures',items: []},
+        {value: 'Jewelery&watches',items: []}
+      ]
+  
+  const CallThisFunction=(item)=>{
+       alert(item.value)
+  }
+
+ return(
+    <div>
+      <Menubar data={menuItems} onClick={CallThisFunction}/>
     </div>
  )
 }

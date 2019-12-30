@@ -26,41 +26,34 @@ yarn add cb-react-menubar
 
 * Define the data(menu items) as per the given format , which you wanna render in the Menubar.
 
-* If you want back in a menubar , give value as back . You will provided with back option.
-
 * If you want nested items for a specific item , Give it in items array.
 
 * If you dont want nested items for a specific item , dont declare the items array or give a empty array for the items.
 
-```
- const menuItems = {
-      value: 'Shopping',   //This is just the heading.It wont be seen in the menubar
-      items: [             //everything inside this items array will be  seen in the menubar
-        {value: 'Fashion',
+```js
+ const menuItems =[
+       {value: 'Fashion',
           items: [
-            {value: 'back'},
             {value: 'Men',
               items: [
                 {value: 'back'},
                 {value: 'Shirts'}
               ]
-            },
+            } ],
         },
         {value: 'Electronics',items: []},
         {value: 'Furnitures',items: []},
         {value: 'Jewelery&watches',items: []}
       ]
-    }
-
   export default MenuItems;
 ```
 
 
 ### 2. Use the Menubar component anywhere in your code
 
-Use the Menubar component and pass in the `data`.
+Use the Menubar component anywhere and pass in the data prop.
 
-```
+```js
 import MenuBar from 'cb-react-menubar';
 import MenuItems from "../path/where/menuItems/present"
 
@@ -78,7 +71,7 @@ const app=()=>{
 
 * You can even have your own className and pass to the Menubar.
 
-```
+```js
 import MenuBar from 'cb-react-menubar';
 import MenuItems from "../path/where/menuItems/present";
 import "./index.css"
@@ -86,20 +79,19 @@ import "./index.css"
 const app=()=>{
   <div>
     <h1>This is Animated Menu-bar</h1>
-    <MenuBar backgroundColor="blue" textColor="white" style="menuBar" data={MenuItems}/>
+    <MenuBar backgroundColor="blue" textColor="white" className="menuBar" data={MenuItems}/>
   </div>
 }
 
 ```
 
-
 ### 4.Animations
 
 * You are provided with various animation effects along with menubar.
 
-* It should be an array which denotes the entering and exiting of the menuItems in the menuBar.W
+* It should be an array which denotes the entering and exiting of the menuItems in the menuBar.
 
-```
+```js
 import MenuBar from 'cb-react-menubar';
 import MenuItems from "../path/where/menuItems/present";
 import "./index.css"
@@ -115,6 +107,31 @@ const app=()=>{
 }
 
 ```
+
+### 5.Callback function
+
+* You are provided with a clickHandler function which you can pass your own function and on clicking on the menu item
+  will call that function and specific object is passed to you.
+
+```js
+import MenuBar from 'cb-react-menubar';
+import MenuItems from "../path/where/menuItems/present";
+import "./index.css"
+
+const app=()=>{
+
+  const ThisIsFunction=(item)=>{
+   alert(item.value)
+  }
+
+  <div>
+    <MenuBar data={MenuItems} onClick={ThisIsFunction}/>
+  </div>
+
+```
+
+
+
 
 
 ## Demo

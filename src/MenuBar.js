@@ -1,11 +1,11 @@
-import React from 'react'
-import './MenuBar.css'
+import React from 'react';
+import './MenuBar.css';
 const MenuBar = () => {
   return (
     <div className='OuterContainer'>
       <div className='InnerContainer1'>
         <p>data</p>
-        <p>Object</p>
+        <p>Array</p>
         <p />
         <p className='Required'> required</p>
       </div>
@@ -25,36 +25,29 @@ const MenuBar = () => {
         <p>'white'</p>
       </div>
       <div className='InnerContainer1'>
-        <p>menuItemsWidth</p>
+        <p>menuContainerWidth</p>
         <p>Custom</p>
         <p>300px</p>
       </div>
       <div className='InnerContainer1'>
-        <p>menuItemsMaxWidth</p>
-        <p>Custom</p>
-        <p>300px</p>
-      </div>
-
-      <div className='InnerContainer1'>
-        <p>Style</p>
+        <p>className</p>
         <p>CSS className</p>
       </div>
       <div className='InnerContainer1'>
-        <p>burgerIconStyle</p>
+        <p>hamBurgerClassName</p>
         <p>CSS className</p>
       </div>
       <div className='InnerContainer1'>
-        <p>burgerIconLineColor</p>
+        <p>iconColor</p>
         <p>String</p>
         <p>'#08cbc4'</p>
       </div>
-      <div className='InnerContainer1'>
-        <p>fontSize</p>
-        <p>custom</p>
-        <p>'16px'</p>
+      <div className="InnerContainer1">
+        <p>onClick</p>
+        <p>function</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MenuBar
+export default MenuBar;
