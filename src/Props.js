@@ -54,7 +54,7 @@ const Props = () => {
           </tr>
           <tr>
             <td>
-              <a href='/src-props/#example-1'>hamBurgerClassName</a>
+              <a href='/src-props/#example-2'>hamBurgerClassName</a>
             </td>
             <td>String</td>
             <td></td>
@@ -62,7 +62,7 @@ const Props = () => {
           </tr>
           <tr>
             <td>
-              <a href='/src-props/#example-1'>iconColor</a>
+              <a href='/src-props/#example-2'>iconColor</a>
             </td>
             <td>String</td>
             <td>'#08cbc4'</td>
