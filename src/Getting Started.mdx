@@ -24,28 +24,21 @@ yarn add cb-react-menubar
 
 ### 1.Define the data
 
-* Define the data(menu items) as per the given format , which you wanna render in the Menubar.
+* Define the data(menu items) as per the given format , which you want to render in the Menubar.
 
 * If you want nested items for a specific item , Give it in items array.
 
 * If you dont want nested items for a specific item , dont declare the items array or give a empty array for the items.
 
 ```js
- const menuItems =[
-       {value: 'Fashion',
-          items: [
-            {value: 'Men',
-              items: [
-                {value: 'back'},
-                {value: 'Shirts'}
-              ]
-            } ],
-        },
-        {value: 'Electronics',items: []},
-        {value: 'Furnitures',items: []},
-        {value: 'Jewelery&watches',items: []}
-      ]
-  export default MenuItems;
+const menuItems = [
+  { value: "Fashion", items: [{ value: "Men", items: [{ value: "Shirts" }] }] },
+  { value: "Electronics", items: [] },
+  { value: "Furnitures", items: [] },
+  { value: "Jewelery&watches", items: [] }
+];
+export default MenuItems;
+
 ```
 
 
@@ -54,34 +47,43 @@ yarn add cb-react-menubar
 Use the Menubar component anywhere and pass in the data prop.
 
 ```js
-import MenuBar from 'cb-react-menubar';
-import MenuItems from "../path/where/menuItems/present"
 
-const app=()=>{
+import Menubar from "cb-react-menubar";
+import MenuItems from "../path/where/menuItems/present";
+
+const app = () => {
   <div>
     <h1>This is Animated Menu-bar</h1>
-    <MenuBar data={MenuItems}/>
-  </div>
-}
+    <Menubar data={MenuItems} />
+  </div>;
+};
+
+
 ```
 
 ### 3. Styling the Menubar
 
-* You can style the Menubar by passing backgroundColor and textColor.
+* You can style the Menubar by passing background-color and text-color.
 
 * You can even have your own className and pass to the Menubar.
 
 ```js
-import MenuBar from 'cb-react-menubar';
+import Menubar from "cb-react-menubar";
 import MenuItems from "../path/where/menuItems/present";
-import "./index.css"
+import "./index.css";
 
-const app=()=>{
+const app = () => {
   <div>
     <h1>This is Animated Menu-bar</h1>
-    <MenuBar backgroundColor="blue" textColor="white" className="menuBar" data={MenuItems}/>
-  </div>
-}
+    <Menubar
+      backgroundColor="blue"
+      textColor="white"
+      className="menuBar"
+      data={MenuItems}
+    />
+  </div>;
+};
+
 
 ```
 
@@ -92,7 +94,7 @@ const app=()=>{
 * It should be an array which denotes the entering and exiting of the menuItems in the menuBar.
 
 ```js
-import MenuBar from 'cb-react-menubar';
+import Menubar from 'cb-react-menubar';
 import MenuItems from "../path/where/menuItems/present";
 import "./index.css"
 
@@ -102,7 +104,7 @@ const app=()=>{
 
   <div>
     <h1>This is Animated Menu-bar</h1>
-    <MenuBar animation={animationNames} data={MenuItems}/>
+    <Menubar animation={animationNames} data={MenuItems}/>
   </div>
 }
 
@@ -110,23 +112,23 @@ const app=()=>{
 
 ### 5.Callback function
 
-* You are provided with a clickHandler function which you can pass your own function and on clicking on the menu item
+* You are provided with a onClick function which you can pass your own function and on clicking on the menu item
   will call that function and specific object is passed to you.
 
 ```js
-import MenuBar from 'cb-react-menubar';
+import Menubar from "cb-react-menubar";
 import MenuItems from "../path/where/menuItems/present";
-import "./index.css"
+import "./index.css";
 
-const app=()=>{
-
-  const ThisIsFunction=(item)=>{
-   alert(item.value)
-  }
+const app = () => {
+  const thisIsFunction = item => {
+    alert(item.value);
+  };
 
   <div>
-    <MenuBar data={MenuItems} onClick={ThisIsFunction}/>
-  </div>
+    <Menubar data={MenuItems} onClick={thisIsFunction} />
+  </div>;
+};
 
 ```
 

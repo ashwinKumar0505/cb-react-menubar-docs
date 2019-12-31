@@ -5,39 +5,46 @@ route:/Props
 
 ---
 
-import MenuBar from "./MenuBar.js"
+import Props from "./Props.js";
+import Note from "./Note.js"
 
 # Props
 
 
 There are many props which you can pass to menubar and make it as you want.
 
-<MenuBar />
+<Props />
 
 
 ## Usage
 
-* You can either pass props or you can leave without passing props
-
-* But data prop is the required props
-
-
 ### example-1
+
+* This is the example for the props - data , backgroundColor , textColor and animation
+
+* data is the required prop to be passed to the menubar.
+
+* data props must be passed in the defined format.
+
 
 ```js
 import Menubar from "cb-react-menubar"
 const App=()=>{
 
-  const menuItems =[
-       {value: 'Fashion'},
-        {value: 'Electronics',items: []},
-        {value: 'Furnitures',items: []},
-        {value: 'Jewelery&watches',items: []}
-      ]
+const menuItems = [
+  { value: "Fashion", items: [{ value: "Men", items: [{ value: "Shirts" }] }] },
+  { value: "Electronics", items: [] },
+  { value: "Furnitures", items: [] },
+  { value: "Jewelery&watches", items: [] }
+];
 
  return(
     <div>
-      <Menubar data={MenuItems} backgroundColor="green" textColor="white" animation=['fadeIn'.'fadeOut'] />
+      <Menubar data={MenuItems}
+       backgroundColor="green" 
+       textColor="white" 
+       animation=['fadeIn'.'fadeOut'] 
+      />
     </div>
  )
 }
@@ -46,17 +53,12 @@ const App=()=>{
 
 ### example-2
 
+* This is the example for props - className , hamBurgerClassName and iconColor 
+
 * To override classname for the menubar . you can write your own css and send the classname
 
 * You can also override the classname of hamBurgerMenu icon
 
-
-```
-Note:  If the classname of hamBurgerMenuIcon doesn't seem to override . Add the prefix .menu to the corresponding
-
-       hamBurgerClassName in your css file
-
-```
 
 ```css
 
@@ -73,47 +75,57 @@ Note:  If the classname of hamBurgerMenuIcon doesn't seem to override . Add the 
 ```
 
 ```js
-import Menubar from "cb-react-menubar"
-import "./Style.css"
-const App=()=>{
-  const menuItems =[
-       {value: 'Fashion'},
-        {value: 'Electronics',items: []},
-        {value: 'Furnitures',items: []},
-        {value: 'Jewelery&watches',items: []}
-      ]
- return(
+
+import Menubar from "cb-react-menubar";
+import "./style.css";
+const App = () => {
+  const menuItems = [
+    { value: "Fashion" },
+    { value: "Electronics", items: [] },
+    { value: "Furnitures", items: [] },
+    { value: "Jewelery&watches", items: [] }
+  ];
+  return (
     <div>
-      <Menubar data={menuItems} classname="menubar" hamBurgerClassName="hamBurgerMenu" iconColor="black"/>
+      <Menubar
+        data={menuItems}
+        className="menubar"
+        hamBurgerClassName="hamBurgerMenu"
+        iconColor="black"
+      />
     </div>
- )
-}
+  );
+};
+
 
 ```
 
+<Note />
+
 ### example-3
 
-```js
-import Menubar from "cb-react-menubar"
-import "./Style.css"
-const App=()=>{
-  
-  const menuItems =[
-       {value: 'Fashion'},
-        {value: 'Electronics',items: []},
-        {value: 'Furnitures',items: []},
-        {value: 'Jewelery&watches',items: []}
-      ]
-  
-  const CallThisFunction=(item)=>{
-       alert(item.value)
-  }
+* This is example for the prop - onClick and menuContainerWidth
 
- return(
+```js
+
+import Menubar from "cb-react-menubar";
+const App = () => {
+  const menuItems = [
+    { value: "Fashion" },
+    { value: "Electronics", items: [] },
+    { value: "Furnitures", items: [] },
+    { value: "Jewelery&watches", items: [] }
+  ];
+
+  const callThisFunction = item => {
+    alert(item.value);
+  };
+
+  return (
     <div>
-      <Menubar data={menuItems} onClick={CallThisFunction}/>
+      <Menubar data={menuItems} onClick={callThisFunction} menuContainerWidth={300}/>
     </div>
- )
-}
+  );
+};
 
 ```

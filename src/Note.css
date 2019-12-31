@@ -1,0 +1,21 @@
+.noteContainer{
+  background-color: #fecd365e;
+  padding: 10px 15px;
+  border-radius: 1%;
+}
+.innerContainer{
+  align-items: center;
+  display: flex;
+}
+
+.innerContainer img{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+.innerContainer h3{
+  margin: 0;
+}
+.noteContainer p{
+  margin:7px 0
+}
