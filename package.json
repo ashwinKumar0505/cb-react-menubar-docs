@@ -10,7 +10,7 @@
   "dependencies": {
     "cb-react-menubar": "^1.0.3",
     "docz": "latest",
-    "gatsby": "^2.18.16",
+    "gatsby": "^4.25.7",
     "prop-type": "0.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
